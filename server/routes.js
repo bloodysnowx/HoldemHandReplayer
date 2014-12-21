@@ -9,6 +9,8 @@ var errors = require('./components/errors');
 module.exports = function(app) {
 
   // Insert routes below
+  app.use('/api/getStatisticsList', require('./api/getStatisticsList'));
+  app.use('/api/getStatistics', require('./api/getStatistics'));
   app.use('/api/getHand', require('./api/getHand'));
   app.use('/api/getHandList', require('./api/getHandList'));
   app.use('/api/uploadHandHistory', require('./api/uploadHandHistory'));

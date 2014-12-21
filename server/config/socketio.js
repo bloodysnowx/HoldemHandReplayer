@@ -18,6 +18,8 @@ function onConnect(socket) {
   });
 
   // Insert sockets below
+  require('../api/getStatisticsList/getStatisticsList.socket').register(socket);
+  require('../api/getStatistics/getStatistics.socket').register(socket);
   require('../api/getHand/getHand.socket').register(socket);
   require('../api/getHandList/getHandList.socket').register(socket);
   require('../api/uploadHandHistory/uploadHandHistory.socket').register(socket);
